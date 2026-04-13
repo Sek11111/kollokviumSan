@@ -1,8 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import HomePage from '../views/HomePage.vue'
+import TrainingForm from '../views/TrainingForm.vue'
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [],
+const routes = [
+  { path: '/', component: HomePage },
+  { path: '/add', component: TrainingForm },
+  { path: '/edit/:id', component: TrainingForm }
+]
+
+export default createRouter({
+  history: createWebHistory(),
+  routes
 })
-
-export default router
